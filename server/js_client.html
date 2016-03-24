@@ -1,0 +1,14 @@
+<html>
+<head>
+<script type="text/javascript" src="hprose-html5.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var client = new hprose.HttpClient("http://127.0.0.1:6000/", ["hello"]);
+    client.hello("World!", function(result) {
+        alert(result);
+    }, function(name, err) {
+        alert(err);
+    });
+</script>
+</body>
